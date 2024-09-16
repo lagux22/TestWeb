@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Astrology Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health & Astrology Calculator</h1>
+        
+        <nav>
+            <button class="nav-button active" data-target="bmiCalculator">BMI</button>
+            <button class="nav-button" data-target="zodiacCalculator">Zodiac</button>
+            <button class="nav-button" data-target="ageCalculator">Age</button>
+        </nav>
+
+        <div class="calculator active" id="bmiCalculator">
+            <h2>BMI Calculator</h2>
+            <input type="number" id="weight" placeholder="Weight (kg)" required>
+            <input type="number" id="height" placeholder="Height (cm)" required>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmiResult"></p>
+        </div>
+
+        <div class="calculator" id="zodiacCalculator">
+            <h2>Zodiac Sign</h2>
+            <input type="date" id="birthdate" required>
+            <button onclick="calculateZodiac()">Get Zodiac Sign</button>
+            <p id="zodiacResult"></p>
+        </div>
+
+        <div class="calculator" id="ageCalculator">
+            <h2>Age Calculator</h2>
+            <input type="date" id="birthdate2" required>
+            <button onclick="calculateAge()">Calculate Age</button>
+            <p id="ageResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
